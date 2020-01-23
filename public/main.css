@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+  font-size: 10px;
+  background-color: #ffbd59;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: 'Acme', sans-serif;
+  color: black;
+}
+
+
+button {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Courier Prime', monospace;
+}
+
+.submit {
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Courier Prime', monospace;
+}
+
+
+div {
+  border: 3px solid white;
+  border-radius: 3px;
+  width: 100%;
+
+}
+
+form {
+  font-family: 'Acme', sans-serif;
+  color: black;
+  font-size: 30px;
+}
