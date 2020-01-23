@@ -1,0 +1,32 @@
+{
+  "name": "wk3-song-guesser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "knex": "^0.20.8",
+    "node": "^13.6.0",
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon index",
+    "knex": "knex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harakeke-2020/wk3-song-guesser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harakeke-2020/wk3-song-guesser/issues"
+  },
+  "homepage": "https://github.com/harakeke-2020/wk3-song-guesser#readme"
+}
