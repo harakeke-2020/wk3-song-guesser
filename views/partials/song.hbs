@@ -1,3 +1,4 @@
+<div>
   <audio id="player" src="{{filepath}}" controls>
     <div>
       <button onclick="document.getElementById('player').play()">Play</button>
@@ -5,10 +6,11 @@
   </audio>
 
 
-<form method="post" action="/result">
-  Artist: <br>
-  <input type="text" id="artist" name="artist"> <br>
-  Title: <br>
-  <input type="text" id="title" name="title"> <br>
-  <input type="submit" value="Submit"> 
-</form>
+  <form method="post" action="/result">
+    Artist: <br>
+    <input type="text" id="artist" name="artist"> <br>
+    Title: <br>
+    <input type="text" id="title" name="title"> <br>
+    <input class="submit" type="submit" value="Submit"> 
+  </form>
+</div>
