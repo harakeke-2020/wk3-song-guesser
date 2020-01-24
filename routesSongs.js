@@ -6,12 +6,18 @@ const db = require('./db')
 
 router.get('/:id', (req, res) => {
   console.log(req.params.id)
-  //res.render('views/song')
-  res.render('partials/song')
+  // res.render('views/song')
+  db.getId(Number(req.params.id))
+    .then(data => {
+      res.render('partials/song', data[0])
+    })
 })
 
 router.post('/:id', (req, res) => {
-  res.render('partials/song')
+  // const data = {
+  //   title: req.body
+  // }
+  console.log('hello')
 })
 
 module.exports = router

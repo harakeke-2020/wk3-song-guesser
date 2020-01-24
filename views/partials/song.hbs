@@ -6,12 +6,12 @@
   </audio>
 
 
-  <form method="post" action="/result">
+  <form method="post" action="/songs/{{id}}">
     Artist: <br>
     <input type="text" id="artist" name="artist"> <br>
     Title: <br>
     <input type="text" id="title" name="title"> <br>
-    <input class="submit" type="submit" value="Submit"> 
+    <input class="submit" name="" type="submit" value="Submit"> 
   </form>
  
    {{>go-home}}
