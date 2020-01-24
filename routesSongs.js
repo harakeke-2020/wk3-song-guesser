@@ -14,8 +14,8 @@ router.get('/:id', (req, res) => {
 
 router.post('/:id', (req, res) => {
   const input = {
-    artist: req.body.artist,
-    title: req.body.title
+    artist: (req.body.artist).toLowerCase(),
+    title: (req.body.title).toLowerCase()
   }
   db.getId(Number(req.params.id))
     .then(data => {
