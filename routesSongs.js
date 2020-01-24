@@ -44,7 +44,10 @@ router.get('/:id/true', (req, res) => {
 })
 
 router.get('/:id/false', (req, res) => {
-  res.render('partials/false', { id: Number(req.params.id) })
+  db.getId(Number(req.params.id))
+    .then(data => {
+      res.render('partials/false', data[0])
+    })
 })
 
 module.exports = router
