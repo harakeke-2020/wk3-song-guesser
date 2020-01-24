@@ -5,11 +5,11 @@ const router = express.Router()
 const db = require('./db')
 
 router.get('/', (req, res) => {
-  res.render('partials/song')
+  res.render('partials/home')
 })
 
 router.get('/songs', (req, res) => {
-  res.render('song')
+  res.render('partials/song')
 })
 
 module.exports = router
