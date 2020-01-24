@@ -2,39 +2,63 @@ body {
   text-align: center;
   font-size: 10px;
   background-color: #ffbd59;
-}
+  /* border: 3px solid white; */
+  border-radius: 3px;
+  width: 60%;
+  height: 1000px;
+  margin: auto;
+  }
 
 h1 {
   font-size: 100px;
   font-family: 'Acme', sans-serif;
-  color: black;
+  color: white;
 }
 
 
 button {
   background-color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  color:black;
   text-align: center;
-  font-size: 30px;
-  font-family: 'Courier Prime', monospace;
+  font-size: 50px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin: 50px;
 }
 
 .submit {
-  background-color: white;
+  background-color: #fdeace;
   text-align: center;
-  font-size: 15px;
-  font-family: 'Courier Prime', monospace;
+  font-size: 50px;
+  border-radius: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin-top: 40px;
 }
 
-/* 
-div {
-  border: 3px solid white;
-  border-radius: 3px;
-  width: 100%;
-
-} */
 
 form {
   font-family: 'Acme', sans-serif;
-  color: black;
+  color:#fdeace;
   font-size: 30px;
+}
+
+input {
+  border: 2px solid white;
+  font-size: 30px;
+  text-align: left;
+  background-color: #fdeace;
+  padding:
+}
+
+img {
+  margin-bottom: 30px;
+}
+
+.layer {
+  display: table;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif);
+  background-position: center top;
+  height: 1000px;
 }
