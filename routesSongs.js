@@ -17,20 +17,34 @@ router.post('/:id', (req, res) => {
     artist: req.body.artist,
     title: req.body.title
   }
-
   db.getId(Number(req.params.id))
     .then(data => {
       let linkNumber = Number(req.params.id)
       if (linkNumber <= 4) {
         console.log('yes', linkNumber)
-        db.checkAnswer(input, data[0])
-        linkNumber++
-        res.redirect(`/songs/${linkNumber}`)
+        if (db.checkAnswer(input, data[0])) {
+          console.log('true')
+          res.redirect(`${linkNumber}/true`)
+        } else {
+          console.log('false')
+          res.redirect(`${linkNumber}/false`)
+        }
+        // linkNumber++
+        //res.redirect('/1/true')
+        // res.redirect(`/songs/${linkNumber}`)
       } else {
         db.checkAnswer(input, data[0])
         res.redirect('/result')
       }
     })
+})
+
+router.get('/:id/true', (req, res) => {
+  res.render('partials/true')
+})
+
+router.get('/:id/false', (req, res) => {
+  res.render('partials/false')
 })
 
 module.exports = router
