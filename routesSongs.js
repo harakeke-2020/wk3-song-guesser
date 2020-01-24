@@ -40,11 +40,11 @@ router.post('/:id', (req, res) => {
 })
 
 router.get('/:id/true', (req, res) => {
-  res.render('partials/true')
+  res.render('partials/true', { id: Number(req.params.id) + 1 })
 })
 
 router.get('/:id/false', (req, res) => {
-  res.render('partials/false')
+  res.render('partials/false', { id: Number(req.params.id) })
 })
 
 module.exports = router
