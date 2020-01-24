@@ -27,6 +27,11 @@ button {
   margin: 50px;
 }
 
+button:hover, input:hover
+{
+  background-color:	#91cca6;
+}
+
 .submit {
   background-color: #fdeace;
   text-align: center;
@@ -58,7 +63,7 @@ img {
 .layer {
   display: table;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif);
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://media.giphy.com/media/3lxD1O74siiz5FvrJs/giphy.gif);
   background-position: center top;
   height: 1000px;
 }
