@@ -5,7 +5,6 @@ const router = express.Router()
 const db = require('./db')
 
 router.get('/:id', (req, res) => {
-  console.log(req.params.id)
   // res.render('views/song')
   db.getId(Number(req.params.id))
     .then(data => {
@@ -14,10 +13,24 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/:id', (req, res) => {
-  // const data = {
-  //   title: req.body
-  // }
-  console.log('hello')
+  const input = {
+    artist: req.body.artist,
+    title: req.body.title
+  }
+
+  db.getId(Number(req.params.id))
+    .then(data => {
+      let linkNumber = Number(req.params.id)
+      if (linkNumber <= 4) {
+        console.log('yes', linkNumber)
+        db.checkAnswer(input, data[0])
+        linkNumber++
+        res.redirect(`/songs/${linkNumber}`)
+      } else {
+        db.checkAnswer(input, data[0])
+        res.redirect('/result')
+      }
+    })
 })
 
 module.exports = router
