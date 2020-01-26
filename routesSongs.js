@@ -21,31 +21,42 @@ router.post('/:id', (req, res) => {
   db.getId(Number(req.params.id))
     .then(data => {
       let linkNumber = Number(req.params.id)
-      if (linkNumber <= 4) {
-        console.log('yes', linkNumber)
-        if (db.checkAnswer(input, data[0])) {
-          console.log('true')
-          res.redirect(`${linkNumber}/true`)
-        } else {
-          console.log('false')
-          res.redirect(`${linkNumber}/false`)
-        }
-        // linkNumber++
-        //res.redirect('/1/true')
-        // res.redirect(`/songs/${linkNumber}`)
+      // if (linkNumber <= 5) {
+      console.log('yes', linkNumber)
+      if (db.checkAnswer(input, data[0])) {
+        console.log('true')
+        res.redirect(`${linkNumber}/true`)
       } else {
-        db.checkAnswer(input, data[0])
-        res.redirect('/result')
+        console.log('false')
+        res.redirect(`${linkNumber}/false`)
       }
+      // }
+      // linkNumber++
+      // res.redirect('/1/true')
+      // res.redirect(`/songs/${linkNumber}`)
+      // } else {
+      //   db.checkAnswer(input, data[0])
+      //   res.redirect('/result')
+      // }
     })
 })
 
 router.get('/:id/true', (req, res) => {
-  res.render('partials/true', { id: Number(req.params.id) + 1 })
+  console.log(req.params.id)
+  if (Number(req.params.id) === 5) {
+    res.render('partials/true', { id: '../../../result' })
+  } else {
+    res.render('partials/true', { id: '/songs/' + (Number(req.params.id) + 1) })
+
+    // res.render('partials/true', { id: Number(req.params.id) + 1 })
+  }
 })
 
 router.get('/:id/false', (req, res) => {
-  res.render('partials/false', { id: Number(req.params.id) })
+  db.getId(Number(req.params.id))
+    .then(data => {
+      res.render('partials/false', data[0])
+    })
 })
 
 module.exports = router
