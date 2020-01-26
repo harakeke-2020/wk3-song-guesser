@@ -8,6 +8,7 @@ router.get('/:id', (req, res) => {
   // res.render('views/song')
   db.getId(Number(req.params.id))
     .then(data => {
+      console.log(data)
       res.render('partials/song', data[0])
     })
 })
